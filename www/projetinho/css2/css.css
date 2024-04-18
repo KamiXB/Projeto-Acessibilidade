@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #320d0d;
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+}
+
+a, .btn {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 5px 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.btn {
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Estilos para a seção principal */
+.fancy {
+    --b: 6px;   /* control the border thickness */
+    --w: 80px;  /* control the width of the line */
+    --g: 15px;  /* control the gap */
+    --c: #0B486B;
+   
+    width: fit-content;
+    padding: 0 1em;
+    line-height: 1.6em;
+    border: 1px solid;
+    color: #fff;
+    background: 
+      conic-gradient(from   45deg at left ,var(--c) 25%,#0000 0) 0,
+      conic-gradient(from -135deg at right,var(--c) 25%,#0000 0) 100%;
+    background-size: 51% 100%;
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    border-image: 
+       linear-gradient(
+         #0000      calc(50% - var(--b)/2),
+         var(--c) 0 calc(50% + var(--b)/2),
+         #0000    0) 
+      1/0 var(--w)/calc(var(--w) + var(--g));
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+#R {
+    font-size: 2rem;
+    text-align: left;
+    margin: 13px;
+    color: #0B486B;
+}
+
+p {
+    font-size: 1rem;
+    text-align: left;
+    margin: 13px;
+    color: black;
+}
+
+#S {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+aside {
+    text-align: left;
+    padding-right:890px;
+}
+
+#T {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}

@@ -1,0 +1,125 @@
+body{
+  width: 100vw;
+  height: 100vh;
+  
+}
+
+.open{
+    width: 100px;
+    height: 30px;
+    background-color: rgb(224, 183, 0);
+    color: white;
+    font-size: 15px;
+    border: rgb(149, 149, 149) 1px solid;
+
+}
+
+.confirm{
+    width: 100px;
+    height: 30px;
+    background-color: rgb(241, 91, 21);
+    color: white;
+    font-size: 15px;
+    border: rgb(149, 149, 149) 1px solid;
+
+}
+
+.finish{
+    width: 100px;
+    height: 30px;
+    background-color: rgb(38, 117, 45);
+    color: white;
+    font-size: 15px;
+    border: rgb(149, 149, 149) 1px solid;
+
+}
+
+#tabela {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 30px;
+  }
+  
+  #tabela td, #tabela th {
+    border: rgb(149, 149, 149) 1px solid;
+    padding: 8px;
+  }
+  
+  #tabela tr:nth-child(even){background-color: #ffffff;}
+  
+  
+  #tabela th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+  }
+
+  #pp{
+    border: rgb(149, 149, 149) 1px solid;
+    padding: 8px;
+    width: 100px;
+    text-align: center;
+    background-color: rgb(149, 149, 149);
+    color: white;
+
+  }
+
+  .nav2{
+    background-color: rgb(248, 248, 214);
+    text-align: center;
+  }
+
+  .v{
+    background-color: rgb(159, 194, 222);
+    border: rgb(149, 149, 149) 1px solid;
+  }
+
+  .f{
+    background-color: rgb(172, 232, 166);
+    border: rgb(149, 149, 149) 1px solid;
+  }
+
+  .x{
+    margin-left: 10px;
+    background-color: rgb(207, 11, 11);
+    border: rgb(149, 149, 149) 1px solid;
+  }
+
+  /* Estilos para o Modal */
+.modal {
+  display: none; /* Por padrão, o modal está oculto */
+  position: fixed; /* Posição fixa para o modal */
+  z-index: 1; /* Certifica-se de que o modal esteja acima de todo o conteúdo */
+  left: 0;
+  overflow: auto; /* Adiciona rolagem se o conteúdo do modal for muito grande */
+  background-color: #1487b4;
+  position: absolute;
+}
+
+/* Conteúdo do Modal */
+.modal-content {
+  background-color: #1487b4;
+  margin: 15% auto; /* Centraliza o modal verticalmente e alinha-o à esquerda */
+  padding: 20px;
+  width: 200px;
+  height: 200px;
+}
+
+/* Botão de Fechar */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}

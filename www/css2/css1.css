@@ -47,9 +47,9 @@ a, .btn {
 
 /* Estilos para a seção principal */
 .fancy {
-    --b: 6px;   /* control the border thickness */
-    --w: 80px;  /* control the width of the line */
-    --g: 15px;  /* control the gap */
+    --b: 3px;   /* control the border thickness */
+    --w: 35px;  /* control the width of the line */
+    --g: 7.5px;  /* control the gap */
     --c: #0B486B;
    
     width: fit-content;
@@ -76,28 +76,24 @@ a, .btn {
 
 #R {
     font-size: 2rem;
-    text-align: left;
+    text-align: center;
     margin: 13px;
     color: #0B486B;
 }
 
 p {
     font-size: 1rem;
-    text-align: left;
+    text-align: center;
     margin: 13px;
     color: black;
 }
 
-#S {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 
 .curso-info{
     padding: 1rem;
-    margin: 1rem;
-    width: 60%;
+    margin: 0.5rem;
+    width: 80%;
 }
 
 #T {
@@ -109,13 +105,19 @@ p {
 }
 .texto{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
 }
 
 img{
-    width: 30%;
-    height: 30%;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin: auto 20px auto auto;
+
 }
 .search-container button {
     padding: 5px 10px;
@@ -129,4 +131,50 @@ img{
 .search-container button:hover {
     background: #a04545;
     
+}
+
+h3{
+    margin: 0 auto auto auto;
+}
+
+
+.botao {
+    position: fixed;
+    top: 35%;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: transparent;
+    padding: 4px;
+}
+
+.botao button {
+    display: block;
+    margin-bottom: 5px;
+    width: 35px;
+    height: 35px;
+    line-height: 30px; 
+    font-size: 16px; 
+    border:none;
+    border-radius: 5px;
+    background-color: #2975E0;
+}
+
+ .varela-round-regular {
+  font-family: "Varela Round", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+}
+
+.botao #toggleButton {
+    display: block;
+    margin-bottom: 5px;
+    width: 35px;
+    height: 35px;
+    line-height: 30px; 
+    font-size: 16px; 
+    border:none;
+    padding: 0;
+    margin-right: 10px;
+    background-color: transparent;
 }

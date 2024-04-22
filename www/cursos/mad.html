@@ -8,14 +8,10 @@
 </head>
 <body>
     <header class="nav"> 
-        <img class="logo" src="logo.png" alt="">
+        <img class="logo" src="../logo.png" alt="">
         <div class="nav-right">
-            <a href="http://localhost:8082/index/projetinho/dash.html"><button class="btn">Cursos</button></a>
-            <button class="btn">Vestibulinho</button>
-            <div class="search-container">
-                <input type="text" placeholder="Pesquisar...">
-                <button type="submit">Buscar</button>
-            </div>
+            <a href="../dash.html"><button class="btn">Cursos</button></a>
+            <a href="../index.html"><button class="btn">Vestibulinho</button></a>
         </div>
     </header>
 
@@ -44,6 +40,68 @@
             </p>
         </div>
 
+<!-- Acessibilidade -->
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+     <div class="botao">
+                <!-- Botões de controle -->
+                <input type="checkbox" id="checkboxLeitura" style="display:none;">
+                <br>
+                <button id="maior" class="varela-round-regular" onclick="aumentar()">A</button>
+                <br>
+                <button id="menor" class="varela-round-regular" onclick="diminuir()">a</button>
+                <br>
+                <button id="toggleButton"><img src="../Audio.png" width="100%" height="100%"></button>
+            </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <script>
+        function aumentar() {
+            var elementosTexto = document.querySelectorAll("p, h1, h2, h3, h4, h5, h6");
+            elementosTexto.forEach(function (elemento) {
+                let style = window.getComputedStyle(elemento, null).getPropertyValue('font-size');
+                var tamanho = parseFloat(style);
+                if (tamanho < 35) {
+                    elemento.style.fontSize = (tamanho + 10) + "px";
+                }
+            });
+        }
 
+        function diminuir() {
+            var elementosTexto = document.querySelectorAll("p, h1, h2, h3, h4, h5, h6");
+            elementosTexto.forEach(function (elemento) {
+                let style = window.getComputedStyle(elemento, null).getPropertyValue('font-size');
+                var tamanho = parseFloat(style);
+                if (tamanho > 25) {
+                    elemento.style.fontSize = (tamanho - 10) + "px";
+                }
+            });
+        }
+
+        // Função para iniciar a fala
+        function falarTexto(texto) {
+            var utterance = new SpeechSynthesisUtterance(texto);
+            window.speechSynthesis.speak(utterance);
+        }
+
+        // Adiciona evento de clique em cada palavra para leitura
+        document.addEventListener('click', function (event) {
+            if ((event.target.nodeName === 'H1' || event.target.nodeName === 'P') && document.getElementById('checkboxLeitura').checked) {
+                falarTexto(event.target.textContent);
+            }
+        });
+
+        // Adiciona evento de clique para ativar/desativar leitura
+        document.getElementById('toggleButton').addEventListener('click', function () {
+            var checkbox = document.getElementById('checkboxLeitura');
+            checkbox.checked = !checkbox.checked; // Inverte o estado da checkbox
+        });
+    </script>
 </body>
 </html>

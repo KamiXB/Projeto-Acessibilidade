@@ -8,7 +8,7 @@ body {
 header {
     background-color: #320d0d;
     height: 4rem;
-    width: 89.7%;
+    width: 92%;
     display: flex;
     justify-content: space-between; 
     align-items: center;
@@ -70,8 +70,17 @@ a, .btn {
          #0000    0) 
       1/0 var(--w)/calc(var(--w) + var(--g));
     margin: 5px auto 0 auto;
+    text-align: center;
 
 
+}
+
+
+p {
+    font-size: 1rem;
+    text-align: center;
+    margin: 13px;
+    color: black;
 }
 
 #R {
@@ -81,28 +90,12 @@ a, .btn {
     color: #0B486B;
 }
 
-p {
-    font-size: 1rem;
-    text-align: center;
-    margin: 13px;
-    color: black;
-}
-
-
-
 .curso-info{
     padding: 1rem;
     margin: 0.5rem;
     width: 80%;
 }
 
-#T {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-    width: 100%;
-}
 .texto{
     display: flex;
     flex-direction: column;
@@ -117,8 +110,8 @@ img{
     justify-content: space-between; 
     align-items: center;
     margin: auto 20px auto auto;
-
 }
+
 .search-container button {
     padding: 5px 10px;
     background-color: #450000;
@@ -130,7 +123,6 @@ img{
 
 .search-container button:hover {
     background: #a04545;
-    
 }
 
 h3{
